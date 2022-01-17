@@ -52,8 +52,13 @@ int main()
     // Execute a command and get the output of the command
     // ------------------------------------------------------------------------- //
     std::string myResult;
+    std::string userinput = "";
 
-    myResult = exec("netcoreapp3.1\\ConsoleCmdLineArgs.exe In 1");
+    std::cout << "Input command: ";
+    std::getline(std::cin, userinput);
+
+    myResult = exec(userinput.c_str());
+    //myResult = exec("netcoreapp3.1\\ConsoleCmdLineArgs.exe In 1");
     std::cout << "Return Result: " + myResult;
 }
 
